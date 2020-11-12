@@ -1,25 +1,30 @@
-import React from 'react';
-import styled from "styled-components";
-import { About, Description, Hide, Image } from '../../styles'
+import React from "react";
+import { motion } from "framer-motion";
+import { About, Description, Hide, Image } from "../../styles";
 
-import home1 from '../../img/home1.png';
+import home1 from "../../img/home1.png";
 
 const AboutSection = () => {
   return (
     <About>
       <Description>
-        <div className="title">
+        <motion.div>
           <Hide>
-            <h2>We work to made</h2>
+            <motion.h2>We work to made</motion.h2>
           </Hide>
           <Hide>
-            <h2>your <span>dreams</span> come</h2>
+            <motion.h2>
+              your <span>dreams</span> come
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>true.</h2>
+            <motion.h2>true.</motion.h2>
           </Hide>
-        </div>
-        <p>Contact us for any photography videography ideas that you have. We are pro with amazing skills</p>
+        </motion.div>
+        <p>
+          Contact us for any photography videography ideas that you have. We are
+          pro with amazing skills
+        </p>
         <button>Contact Us</button>
       </Description>
       <Image>
@@ -27,6 +32,6 @@ const AboutSection = () => {
       </Image>
     </About>
   );
-}
+};
 
 export default AboutSection;

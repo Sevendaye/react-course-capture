@@ -1,20 +1,25 @@
-import React from 'react';
-import styled from 'styled-components';
-import { About, Description, Image } from '../../styles';
+import React from "react";
+import styled from "styled-components";
+import { About, Description, Image } from "../../styles";
+import { scrollReview } from "../../animation";
+import useScroll from "../useScroll";
 
 //Import icons
-import clock from '../../img/clock.svg';
-import diaphragm from '../../img/diaphragm.svg';
-import money from '../../img/money.svg';
-import teamwork from '../../img/teamwork.svg';
-import home2 from '../../img/home2.png';
-
+import clock from "../../img/clock.svg";
+import diaphragm from "../../img/diaphragm.svg";
+import money from "../../img/money.svg";
+import teamwork from "../../img/teamwork.svg";
+import home2 from "../../img/home2.png";
 
 const ServicesSection = () => {
+  const [ref, animation] = useScroll();
+
   return (
-    <Services>
+    <Services ref={ref} variants={scrollReview} animate={animation}>
       <Description>
-        <h2>High <span>quality</span> services</h2>
+        <h2>
+          High <span>quality</span> services
+        </h2>
         <Cards>
           <Card>
             <div className="icon">
@@ -51,13 +56,13 @@ const ServicesSection = () => {
       </Image>
     </Services>
   );
-}
+};
 
 const Services = styled(About)`
-  h2{
+  h2 {
     padding-bottom: 5rem;
   }
-  p{
+  p {
     width: 70%;
     padding: 2rem 0rem 4rem 0rem;
   }
@@ -70,7 +75,7 @@ const Cards = styled.div`
 
 const Card = styled.div`
   flex-basis: 20rem;
-  .icon{
+  .icon {
     display: flex;
     align-items: center;
     h3 {

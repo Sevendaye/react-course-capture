@@ -91,3 +91,14 @@ export const scrollReview = {
   hidden: { opacity: 0, scale: 1.2, transition: { duration: 0.5 } },
   show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
 };
+
+export const swoopAdoop = {
+  hidden: { width: "0%" },
+  show: {
+    width: "100%",
+    transition: {
+      duration: "1",
+      ease: "easeOut",
+    },
+  },
+};

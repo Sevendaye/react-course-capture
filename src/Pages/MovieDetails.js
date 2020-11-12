@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
 //Page animations
-import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 
 //Movies Datas

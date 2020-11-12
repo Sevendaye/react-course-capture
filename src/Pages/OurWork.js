@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-//Page animations
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+//Page animations
 import {
   pageAnimation,
   fade,
@@ -12,6 +13,7 @@ import {
   sliderContainer,
   swoopAdoop,
 } from "../animation";
+import ScrollTop from "../components/ScrollTop";
 import { Hide } from "../styles";
 import useScroll from "../components/useScroll";
 
@@ -65,6 +67,7 @@ const OurWork = () => {
           <img src={goodtimes} alt="goodtimes" />
         </Link>
       </Movie>
+      <ScrollTop />
     </Work>
   );
 };
